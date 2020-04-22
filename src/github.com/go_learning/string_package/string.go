@@ -2,6 +2,7 @@ package string_package
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -41,5 +42,26 @@ func StringsFun() {
 	fmt.Printf("end prefix is world1 %t \n", strings.HasSuffix(str2, "world1"))
 	//判断包含
 	fmt.Printf("contains hello? %t \n", strings.Contains(str1, "hello"))
+	// 判断子字符串或字符在父字符串中出现的位置
+	fmt.Printf("index of hello is %d\n", strings.Index(str1, "hello"))
+	//字符串替换
+	fmt.Printf("replace part string %s\n", strings.Replace(str1, "o", "O", 2))
+	//统计字符串出现次数
+	fmt.Printf("count char o count %d\n", strings.Count(str1, "o"))
+	//将字符串重复n次返回一个新的字符串
+	fmt.Printf("repeat %d count new string is %s\n", 2, strings.Repeat(str1, 2))
+	//转换成小写
+	fmt.Printf("to lower is %s \n", strings.ToLower(str1))
+	//修剪字符串
+	fmt.Printf("trim %s %s", strings.TrimSpace(str1), strings.Trim(str1, "h"))
+	//空格分割字符串
+	ss0 := strings.Fields(str1)
+	//特定符号分割字符串
+	ss1 := strings.Split(str1, " ")
+	//连接字符串
+	ss2 := strings.Join(ss1, "-")
+	fmt.Printf("split %v %v %v", ss0, ss1, ss2)
+	//字符串与其他类型转换strconv
+	strconv.Itoa(64)
 
 }
