@@ -1,6 +1,6 @@
 package main
 
-import "github.com/go_learning/goroutine_package"
+import "github.com/go_learning/net/web"
 
 func main() {
 	//常量部分
@@ -97,5 +97,9 @@ func main() {
 	//goroutine_package.TestSemaphore()
 	//goroutine_package.TestSelect()
 	//goroutine_package.Ticker()
-	goroutine_package.TestMultiplexing()
+	//goroutine_package.TestMultiplexing()
+
+	//net
+	//web.TestHead()
+	web.StartSimpleWebServer()
 }
