@@ -1,10 +1,13 @@
 package main
 
-import "github.com/go_learning/net/web"
+import (
+	"github.com/dscxieyong/go_learning/const_package"
+	"github.com/go_learning/interface_package"
+)
 
 func main() {
 	//常量部分
-	//const_package.PrintUppercase()
+	const_package.PrintUppercase()
 	//const_package.PrintLowercase()
 	//const_package.PrintNumber()
 
@@ -101,5 +104,11 @@ func main() {
 
 	//net
 	//web.TestHead()
-	web.StartSimpleWebServer()
+	//web.StartSimpleWebServer()
+
+	//context
+	//context.TestContext()
+	//str := fmt.Sprintf("%v--%v","1231",1213)
+	//fmt.Println(str)
+	interface_package.TestInterfaceWithMethod()
 }

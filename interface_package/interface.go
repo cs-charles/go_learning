@@ -121,9 +121,9 @@ func (l list) setValue(i int) {
 
 func InterfaceAsset() {
 	//TODO 搞清楚两者区别
-	//结构体不能直接赋值给接口，需要赋值指针给接口，而数组可以直接赋值给接口
 	/*l := list([]int{1,2})
 	var v ValueAble = l*/
+	//a代表指针
 	a := new(A)
 	var va ValueAble = a
 	if t, ok := va.(*A); ok {
@@ -133,6 +133,7 @@ func InterfaceAsset() {
 
 	b := new(B)
 	var vb ValueAble = b
+	//判断类型是否一致
 	if t, ok := vb.(*B); ok {
 		fmt.Printf("vb implement type is %T\n", t)
 	}
